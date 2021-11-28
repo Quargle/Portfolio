@@ -110,8 +110,10 @@
   #projects-header{
     width: 100%;
     margin: 0;
+    padding: 75px 0px;  /* this is to counter the navbar when jumping to section */
     min-height: 10vw;
-    background-color: #233036;
+    background-color: var(--color-1);
+    /*background-color: #233036; */
     color:#a8dadc;
     display: flex;
     justify-content: center;

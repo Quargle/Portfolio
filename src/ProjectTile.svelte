@@ -26,13 +26,13 @@
     width: 30rem;
     height: 20rem;
     margin: 3rem;
-    border-radius: 1rem;
+    border-radius: 1rem; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     text-decoration: none;
-    box-shadow: 0.5rem 0.5rem 0.2rem #1d3577;
+    /*box-shadow: 0.5rem 0.5rem 0.2rem #1d3577; */
     /*background-color: #457b9d; */
     background-color: white; 
     background-size: cover; 

@@ -20,8 +20,14 @@
 </main>
 
 <style>
+	/* Set global color variables so color scheme can be used throughout */
+	:global(:root){
+   		--color-1: #233036;
+	}
+
 	main {
 		margin: 0;
+		background-color: #457b9d;
 	}
 </style>
 

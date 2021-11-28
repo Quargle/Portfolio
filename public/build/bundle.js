@@ -592,12 +592,12 @@ var app = (function () {
     			t1 = space();
     			p = element("p");
     			p.textContent = `${/*text*/ ctx[3]}`;
-    			attr_dev(h3, "class", "svelte-1k9tbln");
+    			attr_dev(h3, "class", "svelte-1wfd4oz");
     			add_location(h3, file$3, 14, 4, 353);
-    			attr_dev(p, "class", "svelte-1k9tbln");
+    			attr_dev(p, "class", "svelte-1wfd4oz");
     			add_location(p, file$3, 15, 4, 374);
     			attr_dev(a, "id", /*id*/ ctx[0]);
-    			attr_dev(a, "class", "project-tile svelte-1k9tbln");
+    			attr_dev(a, "class", "project-tile svelte-1wfd4oz");
     			attr_dev(a, "target", "_blank");
     			attr_dev(a, "href", /*link*/ ctx[1]);
     			set_style(a, "background-image", "url('" + /*background*/ ctx[4] + "')");
@@ -786,12 +786,12 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(h1, "class", "svelte-a7chz");
+    			attr_dev(h1, "class", "svelte-1q320sp");
     			add_location(h1, file$2, 72, 8, 2179);
     			attr_dev(div0, "id", "projects-header");
-    			attr_dev(div0, "class", "svelte-a7chz");
+    			attr_dev(div0, "class", "svelte-1q320sp");
     			add_location(div0, file$2, 71, 4, 2144);
-    			attr_dev(div1, "class", "projects-content svelte-a7chz");
+    			attr_dev(div1, "class", "projects-content svelte-1q320sp");
     			add_location(div1, file$2, 75, 2, 2211);
     			attr_dev(section, "id", "projects-section");
     			add_location(section, file$2, 70, 0, 2108);
@@ -1154,7 +1154,7 @@ var app = (function () {
     			attr_dev(script, "integrity", "sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p");
     			attr_dev(script, "crossorigin", "anonymous");
     			add_location(script, file, 9, 1, 454);
-    			attr_dev(main, "class", "svelte-329bu3");
+    			attr_dev(main, "class", "svelte-1f1ihnp");
     			add_location(main, file, 13, 0, 695);
     		},
     		l: function claim(nodes) {
