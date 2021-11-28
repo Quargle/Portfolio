@@ -17,12 +17,6 @@
 	<About />
 	<Projects />
 	<Contact />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<p>Sample text</p>
 </main>
 
 <style>
