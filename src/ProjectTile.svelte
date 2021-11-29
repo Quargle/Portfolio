@@ -6,7 +6,7 @@
     const title:string = project.title;
     const text:string = project.text;
     const tools:string = project.tools;
-    const background:string = project.background;
+    const image:string = project.image;
 
 </script>
 
@@ -14,9 +14,9 @@
     class="project-tile" 
     target="_blank" 
     href={link}
-    style="background-image: url('{background}')">
+    >
+    <img src={image} alt="A logo related to the project">
     <h3>{title}</h3>
-    <p>{text}</p>
 </a>
 
 
@@ -24,9 +24,9 @@
   
   a{
     width: 30rem;
-    height: 20rem;
+    height: 30rem;
     margin: 3rem;
-    border-radius: 1rem; 
+    /*border-radius: 1rem;  */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,12 +34,17 @@
     text-decoration: none;
     /*box-shadow: 0.5rem 0.5rem 0.2rem #1d3577; */
     /*background-color: #457b9d; */
-    background-color: white; 
-    background-size: cover; 
   }
 
-    h3 {
-    height: 50%;
+  img {
+      width: 100%;
+      height: 75%;
+      background-color: white;
+  }
+
+  h3 {
+    width: 100%;
+    height: 25%;
     margin: 0;
     font-size: 2.5rem;
     font-weight: bold;
@@ -49,7 +54,9 @@
     justify-content: center;
     align-content: center;
     flex-direction: column;
-    color: #233036; 
+    color: white; 
+    background-color: var(--color-1);
+    text-decoration: none;
   }
   
   p {

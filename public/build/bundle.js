@@ -68,9 +68,6 @@ var app = (function () {
     function children(element) {
         return Array.from(element.childNodes);
     }
-    function set_style(node, key, value, important) {
-        node.style.setProperty(key, value, important ? 'important' : '');
-    }
     function custom_event(type, detail, bubbles = false) {
         const e = document.createEvent('CustomEvent');
         e.initCustomEvent(type, bubbles, false, detail);
@@ -399,22 +396,22 @@ var app = (function () {
     			a2 = element("a");
     			a2.textContent = "Contact";
     			attr_dev(a0, "href", "#welcome-section");
-    			attr_dev(a0, "class", "svelte-19254ty");
+    			attr_dev(a0, "class", "svelte-1c29wvv");
     			add_location(a0, file$5, 3, 6, 41);
-    			attr_dev(li0, "class", "svelte-19254ty");
+    			attr_dev(li0, "class", "svelte-1c29wvv");
     			add_location(li0, file$5, 3, 2, 37);
     			attr_dev(a1, "href", "#projects-header");
-    			attr_dev(a1, "class", "svelte-19254ty");
+    			attr_dev(a1, "class", "svelte-1c29wvv");
     			add_location(a1, file$5, 4, 6, 89);
-    			attr_dev(li1, "class", "svelte-19254ty");
+    			attr_dev(li1, "class", "svelte-1c29wvv");
     			add_location(li1, file$5, 4, 2, 85);
     			attr_dev(a2, "href", "#contact-section");
-    			attr_dev(a2, "class", "svelte-19254ty");
+    			attr_dev(a2, "class", "svelte-1c29wvv");
     			add_location(a2, file$5, 5, 6, 140);
-    			attr_dev(li2, "class", "svelte-19254ty");
+    			attr_dev(li2, "class", "svelte-1c29wvv");
     			add_location(li2, file$5, 5, 2, 136);
     			attr_dev(navbar, "id", "navbar");
-    			attr_dev(navbar, "class", "nav svelte-19254ty");
+    			attr_dev(navbar, "class", "nav svelte-1c29wvv");
     			add_location(navbar, file$5, 2, 0, 2);
     		},
     		l: function claim(nodes) {
@@ -580,37 +577,38 @@ var app = (function () {
 
     function create_fragment$3(ctx) {
     	let a;
+    	let img;
+    	let img_src_value;
+    	let t0;
     	let h3;
-    	let t1;
-    	let p;
 
     	const block = {
     		c: function create() {
     			a = element("a");
+    			img = element("img");
+    			t0 = space();
     			h3 = element("h3");
     			h3.textContent = `${/*title*/ ctx[2]}`;
-    			t1 = space();
-    			p = element("p");
-    			p.textContent = `${/*text*/ ctx[3]}`;
-    			attr_dev(h3, "class", "svelte-1wfd4oz");
-    			add_location(h3, file$3, 14, 4, 353);
-    			attr_dev(p, "class", "svelte-1wfd4oz");
-    			add_location(p, file$3, 15, 4, 374);
+    			if (!src_url_equal(img.src, img_src_value = /*image*/ ctx[3])) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "A logo related to the project");
+    			attr_dev(img, "class", "svelte-sscsbi");
+    			add_location(img, file$3, 14, 4, 298);
+    			attr_dev(h3, "class", "svelte-sscsbi");
+    			add_location(h3, file$3, 15, 4, 356);
     			attr_dev(a, "id", /*id*/ ctx[0]);
-    			attr_dev(a, "class", "project-tile svelte-1wfd4oz");
+    			attr_dev(a, "class", "project-tile svelte-sscsbi");
     			attr_dev(a, "target", "_blank");
     			attr_dev(a, "href", /*link*/ ctx[1]);
-    			set_style(a, "background-image", "url('" + /*background*/ ctx[4] + "')");
-    			add_location(a, file$3, 9, 0, 223);
+    			add_location(a, file$3, 9, 0, 213);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
+    			append_dev(a, img);
+    			append_dev(a, t0);
     			append_dev(a, h3);
-    			append_dev(a, t1);
-    			append_dev(a, p);
     		},
     		p: noop,
     		i: noop,
@@ -640,7 +638,7 @@ var app = (function () {
     	const title = project.title;
     	const text = project.text;
     	const tools = project.tools;
-    	const background = project.background;
+    	const image = project.image;
     	const writable_props = ['project'];
 
     	Object.keys($$props).forEach(key => {
@@ -648,7 +646,7 @@ var app = (function () {
     	});
 
     	$$self.$$set = $$props => {
-    		if ('project' in $$props) $$invalidate(5, project = $$props.project);
+    		if ('project' in $$props) $$invalidate(4, project = $$props.project);
     	};
 
     	$$self.$capture_state = () => ({
@@ -658,24 +656,24 @@ var app = (function () {
     		title,
     		text,
     		tools,
-    		background
+    		image
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('project' in $$props) $$invalidate(5, project = $$props.project);
+    		if ('project' in $$props) $$invalidate(4, project = $$props.project);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [id, link, title, text, background, project];
+    	return [id, link, title, image, project];
     }
 
     class ProjectTile extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$3, create_fragment$3, safe_not_equal, { project: 5 });
+    		init(this, options, instance$3, create_fragment$3, safe_not_equal, { project: 4 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -687,7 +685,7 @@ var app = (function () {
     		const { ctx } = this.$$;
     		const props = options.props || {};
 
-    		if (/*project*/ ctx[5] === undefined && !('project' in props)) {
+    		if (/*project*/ ctx[4] === undefined && !('project' in props)) {
     			console.warn("<ProjectTile> was created without expected prop 'project'");
     		}
     	}
@@ -786,15 +784,15 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(h1, "class", "svelte-1q320sp");
-    			add_location(h1, file$2, 72, 8, 2179);
+    			attr_dev(h1, "class", "svelte-s9yx2o");
+    			add_location(h1, file$2, 72, 8, 2184);
     			attr_dev(div0, "id", "projects-header");
-    			attr_dev(div0, "class", "svelte-1q320sp");
-    			add_location(div0, file$2, 71, 4, 2144);
-    			attr_dev(div1, "class", "projects-content svelte-1q320sp");
-    			add_location(div1, file$2, 75, 2, 2211);
+    			attr_dev(div0, "class", "svelte-s9yx2o");
+    			add_location(div0, file$2, 71, 4, 2149);
+    			attr_dev(div1, "class", "projects-content svelte-s9yx2o");
+    			add_location(div1, file$2, 75, 2, 2216);
     			attr_dev(section, "id", "projects-section");
-    			add_location(section, file$2, 70, 0, 2108);
+    			add_location(section, file$2, 70, 0, 2113);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -884,10 +882,10 @@ var app = (function () {
     	const tribute = {
     		id: "tribute",
     		link: "https://quargle.github.io/static_pages/Greta.html",
-    		title: "Tribute",
+    		title: "Tribute Page",
     		text: "A sample tribute page",
     		tools: "HTML and CSS",
-    		background: ''
+    		image: 'logos/greta-tribute.png'
     	};
 
     	projects.push(tribute);
@@ -895,10 +893,10 @@ var app = (function () {
     	const squirrels = {
     		id: "squirrels-rest",
     		link: "https://quargle.github.io/squirrels-rest/",
-    		title: "Squirrel's Rest Refuge for Exhausted Squirrels",
+    		title: "Squirrel's Rest",
     		text: "An example of static pages based on HTML and CSS alone.",
     		tools: "HTML and CSS",
-    		background: ''
+    		image: 'logos/squirrel-opaque.png'
     	};
 
     	projects.push(squirrels);
@@ -909,7 +907,7 @@ var app = (function () {
     		title: "Survey Form",
     		text: "A simple form written in HTML and CSS",
     		tools: "HTML and CSS",
-    		background: 'logos/survey-form-transparent.png'
+    		image: 'logos/survey-form-opaque.png'
     	};
 
     	projects.push(surveyForm);
@@ -920,7 +918,7 @@ var app = (function () {
     		title: "Drumkit",
     		text: "A JavaScript Drumkit",
     		tools: "JavaScript, HTML and CSS",
-    		background: ''
+    		image: 'logos/drumkit.png'
     	};
 
     	projects.push(drumkit);
@@ -931,7 +929,7 @@ var app = (function () {
     		title: "Etch-a-Sketch",
     		text: "",
     		tools: "JavaScript, HTML and CSS",
-    		background: ''
+    		image: 'logos/sketch.png'
     	};
 
     	projects.push(sketch);
@@ -942,8 +940,8 @@ var app = (function () {
     		title: "Svelte Counter",
     		text: "A simple counter that can be incremented and decremented",
     		tools: "Svelte",
-    		background: "logos/svelte-transparent.png"
-    	}; //background: "https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg"
+    		image: "logos/svelte-counter.png"
+    	}; //image: "https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg"
 
     	projects.push(svelteCounter);
 
@@ -953,7 +951,7 @@ var app = (function () {
     		title: "React Counter",
     		text: "This doesn't actually link to anything yet",
     		tools: "React",
-    		background: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+    		image: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
     	};
 
     	projects.push(reactCounter);
@@ -1024,30 +1022,30 @@ var app = (function () {
     			t5 = space();
     			a2 = element("a");
     			a2.textContent = "Twitter";
-    			attr_dev(h2, "class", "svelte-1231phr");
+    			attr_dev(h2, "class", "svelte-1vqlvb7");
     			add_location(h2, file$1, 2, 6, 78);
     			attr_dev(div0, "class", "contact-section-header");
     			add_location(div0, file$1, 1, 4, 35);
     			attr_dev(a0, "id", "profile-link");
-    			attr_dev(a0, "class", "contact-tile svelte-1231phr");
+    			attr_dev(a0, "class", "contact-tile svelte-1vqlvb7");
     			attr_dev(a0, "href", "https://github.com/Peter-Evans-Cerberus");
     			attr_dev(a0, "target", "_blank");
     			add_location(a0, file$1, 6, 6, 156);
     			attr_dev(a1, "id", "cerberus-website");
-    			attr_dev(a1, "class", "contact-tile svelte-1231phr");
+    			attr_dev(a1, "class", "contact-tile svelte-1vqlvb7");
     			attr_dev(a1, "href", "https://cerberusnuclear.com/");
     			attr_dev(a1, "target", "_blank");
     			add_location(a1, file$1, 7, 6, 286);
     			attr_dev(a2, "id", "twitter");
-    			attr_dev(a2, "class", "contact-tile svelte-1231phr");
+    			attr_dev(a2, "class", "contact-tile svelte-1vqlvb7");
     			attr_dev(a2, "href", "https://twitter.com/quargy");
     			attr_dev(a2, "target", "_blank");
     			add_location(a2, file$1, 8, 6, 412);
     			attr_dev(div1, "id", "contact-section-body");
-    			attr_dev(div1, "class", "svelte-1231phr");
+    			attr_dev(div1, "class", "svelte-1vqlvb7");
     			add_location(div1, file$1, 5, 4, 118);
     			attr_dev(section, "id", "contact-section");
-    			attr_dev(section, "class", "svelte-1231phr");
+    			attr_dev(section, "class", "svelte-1vqlvb7");
     			add_location(section, file$1, 0, 0, 0);
     		},
     		l: function claim(nodes) {
@@ -1145,17 +1143,18 @@ var app = (function () {
     			create_component(projects.$$.fragment);
     			t3 = space();
     			create_component(contact.$$.fragment);
+    			document.title = "Pete's Portfolio Site";
     			attr_dev(link, "href", "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css");
     			attr_dev(link, "rel", "stylesheet");
     			attr_dev(link, "integrity", "sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3");
     			attr_dev(link, "crossorigin", "anonymous");
-    			add_location(link, file, 8, 1, 242);
+    			add_location(link, file, 9, 1, 280);
     			if (!src_url_equal(script.src, script_src_value = "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js")) attr_dev(script, "src", script_src_value);
     			attr_dev(script, "integrity", "sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p");
     			attr_dev(script, "crossorigin", "anonymous");
-    			add_location(script, file, 9, 1, 454);
-    			attr_dev(main, "class", "svelte-1f1ihnp");
-    			add_location(main, file, 13, 0, 695);
+    			add_location(script, file, 10, 1, 492);
+    			attr_dev(main, "class", "svelte-1ytypgf");
+    			add_location(main, file, 14, 0, 733);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");

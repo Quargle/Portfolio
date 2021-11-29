@@ -29,7 +29,7 @@
     padding: 3rem;
     margin: 0;
     text-align: center;
-    color: #69bee3;
+    color: var(--color-3);
   }
   
   #contact-section-body {
@@ -46,12 +46,12 @@
     margin: 3rem;
     padding: 3rem 5rem;
     border-radius: 1rem;
-    background-color: #457b9d;
+    background-color:var(--color-3);
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    color: #233036;
+    color: var(--color-1);
     text-decoration: none;
     font-size: 2rem;
     box-shadow: 0.5rem 0.5rem 0.2rem #222222;

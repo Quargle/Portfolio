@@ -6,20 +6,20 @@
   const tribute:object = {
     id: "tribute",
     link: "https://quargle.github.io/static_pages/Greta.html",
-    title: "Tribute",
+    title: "Tribute Page",
     text: "A sample tribute page",
     tools: "HTML and CSS",
-    background: '',
+    image: 'logos/greta-tribute.png',
   }
   projects.push(tribute);
 
   const squirrels:object = {
     id: "squirrels-rest",
     link: "https://quargle.github.io/squirrels-rest/",
-    title: "Squirrel's Rest Refuge for Exhausted Squirrels",
+    title: "Squirrel's Rest",
     text: "An example of static pages based on HTML and CSS alone.",
     tools: "HTML and CSS",
-    background: '',
+    image: 'logos/squirrel-opaque.png',
   }
   projects.push(squirrels);
 
@@ -29,7 +29,7 @@
     title: "Survey Form",
     text: "A simple form written in HTML and CSS",
     tools: "HTML and CSS",
-    background: 'logos/survey-form-transparent.png',
+    image: 'logos/survey-form-opaque.png',
   }
   projects.push(surveyForm);
 
@@ -39,7 +39,7 @@
     title: "Drumkit",
     text: "A JavaScript Drumkit",
     tools: "JavaScript, HTML and CSS",
-    background: '',
+    image: 'logos/drumkit.png',
   }
   projects.push(drumkit);
 
@@ -49,7 +49,7 @@
     title: "Etch-a-Sketch",
     text: "",
     tools: "JavaScript, HTML and CSS",
-    background: '',
+    image: 'logos/sketch.png',
   }
   projects.push(sketch);
 
@@ -59,8 +59,8 @@
     title: "Svelte Counter",
     text: "A simple counter that can be incremented and decremented",
     tools: "Svelte",
-    background: "logos/svelte-transparent.png",
-    //background: "https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg"
+    image: "logos/svelte-counter.png"
+    //image: "https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg"
   }
   projects.push(svelteCounter);
 
@@ -70,7 +70,7 @@
     title: "React Counter",
     text: "This doesn't actually link to anything yet",
     tools: "React",
-    background: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
   }
   projects.push(reactCounter);
 
@@ -113,7 +113,6 @@
     padding: 75px 0px;  /* this is to counter the navbar when jumping to section */
     min-height: 10vw;
     background-color: var(--color-1);
-    /*background-color: #233036; */
     color:#a8dadc;
     display: flex;
     justify-content: center;
