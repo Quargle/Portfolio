@@ -59,6 +59,7 @@
     text-decoration: none;
   }
   
+  /*
   p {
     height: 50%;
     margin: 0;
@@ -71,5 +72,6 @@
     flex-direction: column;
     color: #233036;
   }
+  */
 
 </style>
