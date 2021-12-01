@@ -5,7 +5,8 @@
 
   const tribute:object = {
     id: "tribute",
-    link: "https://quargle.github.io/static_pages/Greta.html",
+    //link: "https://quargle.github.io/Portfolio/static_pages/Greta.html",
+    link: "https://quargle.github.io/FreeCodeCamp/Responsive_Web_Design/Survey_form/survey_form.html",
     title: "Tribute Page",
     text: "A sample tribute page",
     tools: "HTML and CSS",
@@ -25,7 +26,7 @@
 
   const surveyForm:object = {
     id: "survey-form",
-    link: "https://quargle.github.io/static_pages/survey_form.html",
+    link: "https://quargle.github.io/FreeCodeCamp/Responsive_Web_Design/Tribute_page/Greta.html",
     title: "Survey Form",
     text: "A simple form written in HTML and CSS",
     tools: "HTML and CSS",
@@ -138,5 +139,6 @@
     padding: 3em;
     background-color: #457b9d;
   }
+
 
 </style>

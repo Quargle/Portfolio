@@ -1,5 +1,10 @@
 <script lang="ts">
+  	import { fade } from 'svelte/transition';
+    import { cubicInOut } from 'svelte/easing';
+
     export let project;
+
+    let expanded:boolean = false;
 
     const id:string=project.id;
     const link:string=project.link;
@@ -10,7 +15,8 @@
 
 </script>
 
-<a id={id} 
+<a 
+    id={id} 
     class="project-tile" 
     target="_blank" 
     href={link}
@@ -32,8 +38,6 @@
     justify-content: center;
     text-align: center;
     text-decoration: none;
-    /*box-shadow: 0.5rem 0.5rem 0.2rem #1d3577; */
-    /*background-color: #457b9d; */
   }
 
   img {
@@ -59,9 +63,9 @@
     text-decoration: none;
   }
   
-  /*
+  
   p {
-    height: 50%;
+    height: 20%;
     margin: 0;
     font-size: 1.75rem;
     font-weight: bold;
@@ -69,9 +73,9 @@
     display: flex;
     justify-content: center;
     align-content: center;
-    flex-direction: column;
-    color: #233036;
+    color: white;
+    background-color: var(--color-1);
   }
-  */
+  
 
 </style>
