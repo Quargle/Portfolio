@@ -63,7 +63,7 @@
     text-decoration: none;
   }
   
-  
+  /*
   p {
     height: 20%;
     margin: 0;
@@ -76,6 +76,6 @@
     color: white;
     background-color: var(--color-1);
   }
-  
+  */
 
 </style>
