@@ -4,7 +4,7 @@
     </div>
     
     <div id="contact-section-body">
-      <a id="profile-link" class="contact-tile"href="https://github.com/Peter-Evans-Cerberus" target="_blank" >GitHub Profile</a>
+      <a id="profile-link" class="contact-tile"href="https://github.com/Quargle" target="_blank" >GitHub Profile</a>
       <a id="cerberus-website" class="contact-tile" href="https://cerberusnuclear.com/" target="_blank" >Cerberus Nuclear</a>
       <a id="twitter" class="contact-tile" href="https://twitter.com/quargy" target="_blank">Twitter</a>
     </div>
