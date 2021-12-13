@@ -12,7 +12,7 @@
     top: 0;
     width: 100%;
     right: 0;
-    background-color: var(--color-4);
+    background-color: var(--color-1);
     min-height: 75px;
     display: flex;
     flex-direction: row;
