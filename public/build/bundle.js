@@ -706,17 +706,17 @@ var app = (function () {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[8] = list[i];
+    	child_ctx[9] = list[i];
     	return child_ctx;
     }
 
-    // (78:4) {#each projects as project }
+    // (87:4) {#each projects as project }
     function create_each_block(ctx) {
     	let projecttile;
     	let current;
 
     	projecttile = new ProjectTile({
-    			props: { project: /*project*/ ctx[8] },
+    			props: { project: /*project*/ ctx[9] },
     			$$inline: true
     		});
 
@@ -747,7 +747,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(78:4) {#each projects as project }",
+    		source: "(87:4) {#each projects as project }",
     		ctx
     	});
 
@@ -787,14 +787,14 @@ var app = (function () {
     			}
 
     			attr_dev(h1, "class", "svelte-4c4eac");
-    			add_location(h1, file$2, 73, 8, 2401);
+    			add_location(h1, file$2, 82, 8, 2715);
     			attr_dev(div0, "id", "projects-header");
     			attr_dev(div0, "class", "svelte-4c4eac");
-    			add_location(div0, file$2, 72, 4, 2365);
+    			add_location(div0, file$2, 81, 4, 2679);
     			attr_dev(div1, "class", "projects-content svelte-4c4eac");
-    			add_location(div1, file$2, 76, 2, 2436);
+    			add_location(div1, file$2, 85, 2, 2750);
     			attr_dev(section, "id", "projects-section");
-    			add_location(section, file$2, 71, 0, 2328);
+    			add_location(section, file$2, 80, 0, 2642);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -948,6 +948,17 @@ var app = (function () {
 
     	projects.push(svelteCounter);
 
+    	const randomQuotesSvelte = {
+    		id: "random-quotes-svelte",
+    		link: "https://quargle.github.io/random-quotes-svelte/",
+    		title: "Random Quote Machine (Svelte)",
+    		text: "A Random Quote Machine",
+    		tools: "Svelte",
+    		image: "logos/quote-machine-svelte.png"
+    	};
+
+    	projects.push(randomQuotesSvelte);
+
     	const reactCounter = {
     		id: "react-counter",
     		link: "",
@@ -973,6 +984,7 @@ var app = (function () {
     		drumkit,
     		sketch,
     		svelteCounter,
+    		randomQuotesSvelte,
     		reactCounter
     	});
 

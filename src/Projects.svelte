@@ -65,6 +65,16 @@
   }
   projects.push(svelteCounter);
 
+  const randomQuotesSvelte:object = {
+    id: "random-quotes-svelte",
+    link: "https://quargle.github.io/random-quotes-svelte/",
+    title: "Random Quote Machine (Svelte)",
+    text: "A Random Quote Machine",
+    tools: "Svelte",
+    image: "logos/quote-machine-svelte.png"
+  }
+  projects.push(randomQuotesSvelte);
+
   const reactCounter:object = {
     id: "react-counter",
     link: "",
