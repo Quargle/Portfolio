@@ -787,14 +787,14 @@ var app = (function () {
     			}
 
     			attr_dev(h1, "class", "svelte-4c4eac");
-    			add_location(h1, file$2, 82, 8, 2715);
+    			add_location(h1, file$2, 82, 8, 2745);
     			attr_dev(div0, "id", "projects-header");
     			attr_dev(div0, "class", "svelte-4c4eac");
-    			add_location(div0, file$2, 81, 4, 2679);
+    			add_location(div0, file$2, 81, 4, 2709);
     			attr_dev(div1, "class", "projects-content svelte-4c4eac");
-    			add_location(div1, file$2, 85, 2, 2750);
+    			add_location(div1, file$2, 85, 2, 2780);
     			attr_dev(section, "id", "projects-section");
-    			add_location(section, file$2, 80, 0, 2642);
+    			add_location(section, file$2, 80, 0, 2672);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -959,16 +959,16 @@ var app = (function () {
 
     	projects.push(randomQuotesSvelte);
 
-    	const reactCounter = {
+    	const randomQuotesReact = {
     		id: "react-counter",
-    		link: "",
-    		title: "React Counter",
-    		text: "This doesn't actually link to anything yet",
+    		link: "https://quargle.github.io/random-quotes-react",
+    		title: "Random Quote Machine (React)",
+    		text: "A Random Quote Machine, made with React",
     		tools: "React",
-    		image: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+    		image: "logos/quote-machine-react.png"
     	};
 
-    	projects.push(reactCounter);
+    	projects.push(randomQuotesReact);
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -985,7 +985,7 @@ var app = (function () {
     		sketch,
     		svelteCounter,
     		randomQuotesSvelte,
-    		reactCounter
+    		randomQuotesReact
     	});
 
     	return [projects];

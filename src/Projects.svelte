@@ -75,15 +75,15 @@
   }
   projects.push(randomQuotesSvelte);
 
-  const reactCounter:object = {
+  const randomQuotesReact:object = {
     id: "react-counter",
-    link: "",
-    title: "React Counter",
-    text: "This doesn't actually link to anything yet",
+    link: "https://quargle.github.io/random-quotes-react",
+    title: "Random Quote Machine (React)",
+    text: "A Random Quote Machine, made with React",
     tools: "React",
-    image: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+    image: "logos/quote-machine-react.png",
   }
-  projects.push(reactCounter);
+  projects.push(randomQuotesReact);
 
 </script>
 
@@ -106,16 +106,6 @@
       </a>
 -->
 
-<!-- TODO: is the games index necessary?
-      <a id="js-games" 
-      class="project-tile" 
-      target="_blank" 
-      href="https://quargle.github.io/Games/index.html"
-      >
-        <h3>Javascript Games</h3>
-        <p>A selection of simple games created using Javascript and CSS</p>  
-      </a>
-    -->
 
 <style>
   #projects-header{
