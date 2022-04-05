@@ -86,7 +86,7 @@
   projects.push(randomQuotesReact);
 
   const markdownPreviewer:object = {
-    id: "markdown-previewr",
+    id: "markdown-previewer",
     link: "https://quargle.github.io/markdown-previewer",
     title: "Markdown Previewer (Svelte)",
     text: "A Markdown Previewer, made with Svelte",
